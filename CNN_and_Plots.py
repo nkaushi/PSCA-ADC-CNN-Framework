@@ -1,4 +1,6 @@
-#Time to get results of the processing
+# Main Script to generate plots after training and testing the data.
+# Please install the necessary packages required in the flow.
+#Time to get the results of the processing
 
 import tensorflow as tf
 
@@ -545,7 +547,7 @@ plt.show()
 
 
 #Two bar plot
-# Use first two categories and corresponding RMSE values
+# Use the first two categories and the corresponding RMSE values
 categories_two = categories[:2]
 x_two = np.arange(len(categories_two))
 values_two = [rmse_full_code_random, rmse]
@@ -569,8 +571,6 @@ ax.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.savefig(os.path.join(plot_dir, 'rmse_comparison_theoretical_vs_actual.png'), dpi=300)
 plt.show()
-
-
 
 #additional tests
 # Count total bit errors per bit (number of samples with error in each bit)
