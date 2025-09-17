@@ -53,7 +53,3 @@ The comparison script compares the parameters obtained for different ADCs. It pl
 5. Total RMSE comparison
 6. Correlation heat maps
 
-
-
-Thank you,
-Dr. Kaushik
