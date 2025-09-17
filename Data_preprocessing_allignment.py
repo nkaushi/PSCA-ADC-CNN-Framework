@@ -1,4 +1,4 @@
-#Allign binary code with time
+#Allign binary code, Iref with time
 import pandas as pd
 import numpy as np
 
@@ -13,19 +13,19 @@ print(df.head(10))
 
 
 # Rename columns based on the new headers // Example headers
-df.columns = ['VINP_RAMP (VINDC=0) X',  
-              'VINP_RAMP (VINDC=0) Y',  
-              '/I55/VREF (VINDC=0) X',  
-              '/I55/VREF (VINDC=0) Y',  
+df.columns = ['VINP_RAMP X',  
+              'VINP_RAMP Y',  
+              '/Ixx/VREF X',  
+              '/Ixx/VREF Y',  
               'Binary_code X',  
               'Binary_code LogicBus',
-              'Code (VINDC=0) X',
-              'Code (VINDC=0) LogicBus'] 
+              'Code X',
+              'Code LogicBus'] 
 
 
 # Extracting the relevant columns for decimal_data and vref_data
 decimal_data = df[['Binary_code X' , 'Binary_code LogicBus']]  # Select decimal data columns (binary code-related)
-vref_data = df[['/I55/VREF (VINDC=0) X', '/I55/VREF (VINDC=0) Y']]  # Select the VREF columns
+vref_data = df[['/Ixx/VREF X', '/Ixx/VREF Y']]  # Select the VREF columns
 
 # Rename columns for easier access
 decimal_data.columns = ['Time', 'Binary_Code']
