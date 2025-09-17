@@ -1,8 +1,8 @@
 # PSCA-ADC-CNN-Framework
 
-This framework is based on NVIDIA-SMI 525.147.05   Driver Version: 525.147.05   CUDA Version: 12.2. Install the required libraries for matplotlib and tensorflow before proceeding with the script.
+This framework is based on NVIDIA-SMI 525.147.05   Driver Version: 525.147.05   CUDA Version: 12.2. Install the required libraries for matplotlib and TensorFlow before proceeding with the script.
 
-This is a list of scripts to test power side-channel attack (PSCA) on ADC CDAC current traces via a full-scale ramp.
+This is a list of scripts to test power side-channel attack (PSCA) on ADC CDAC current traces via a full-scale ramp. The secure and unsecure ADCs are single-ended 8-bit Flash-SAR ADCs and 8-bit SAR ADC based on a split capacitor scheme. The results are based on transistor-level transient simulation results.
 If you are new to this, this framework enables characterization of SAR ADC against Power Side Channel Attacks (PSCA) by utilizing the current trace from the Capacitive DAC (CDAC). The CDAC shows the current related to the bit cycling during the conversion process. The data required is the current signature from the VREF node of the CDAC. The input signal should span a full range with at least 20 LSB per conversion. This gives enough data for each code.
 
 A transient simulation of the ramp should have the following traces.
